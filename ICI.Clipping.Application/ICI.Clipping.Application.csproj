@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ICI.Clipping.Data\ICI.Clipping.Data.csproj" />
   </ItemGroup>
 
