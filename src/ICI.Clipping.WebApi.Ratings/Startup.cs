@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Users
+namespace ICI.Clipping.WebApi.Ratings
 {
 	public class Startup
 	{
@@ -28,7 +28,7 @@ namespace ICI.Clipping.WebApi.Users
 		{
 			services.AddControllers();
 			services.AddSwaggerGen(c => {
-				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Users", Version = "v1" });
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Rates", Version = "v1" });
 			});
 		}
 
@@ -38,7 +38,7 @@ namespace ICI.Clipping.WebApi.Users
 			if (env.IsDevelopment()) {
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.WebApi.Users"));
+				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.WebApi.Rates"));
 			}
 
 			app.UseHttpsRedirection();

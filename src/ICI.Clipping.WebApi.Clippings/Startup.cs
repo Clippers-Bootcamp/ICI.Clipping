@@ -28,7 +28,7 @@ namespace ICI.Clipping.WebApi.Clippings
 		{
 			services.AddControllers();
 			services.AddSwaggerGen(c => {
-				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.Clippings.WebApi", Version = "v1" });
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Clippings", Version = "v1" });
 			});
 		}
 
@@ -38,7 +38,7 @@ namespace ICI.Clipping.WebApi.Clippings
 			if (env.IsDevelopment()) {
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.Clippings.WebApi"));
+				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.WebApi.Clippings"));
 			}
 
 			app.UseHttpsRedirection();
