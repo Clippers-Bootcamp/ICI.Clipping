@@ -3,20 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Application", "ICI.Clipping.Application\ICI.Clipping.Application.csproj", "{8C96101B-A24E-433D-89DE-1E5BAC1C4A55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Application", "src\ICI.Clipping.Application\ICI.Clipping.Application.csproj", "{8C96101B-A24E-433D-89DE-1E5BAC1C4A55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Data", "ICI.Clipping.Data\ICI.Clipping.Data.csproj", "{65E5FBA2-5F26-468B-A2F6-2636F192CBEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Data", "src\ICI.Clipping.Data\ICI.Clipping.Data.csproj", "{65E5FBA2-5F26-468B-A2F6-2636F192CBEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF34ABEB-A9E4-4C1A-855B-A81081147EEA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{C1DA61FB-16B8-46D3-A9E6-DE9A037EC61D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C1DA61FB-16B8-46D3-A9E6-DE9A037EC61D}"
 	ProjectSection(SolutionItems) = preProject
-		tasks.txt = tasks.txt
+		doc\tasks.txt = doc\tasks.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Clippings", "ICI.Clipping.WebApi.Clippings\ICI.Clipping.WebApi.Clippings.csproj", "{A6F83C06-CE6C-4BD4-8858-143641315658}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Clippings", "src\ICI.Clipping.WebApi.Clippings\ICI.Clipping.WebApi.Clippings.csproj", "{A6F83C06-CE6C-4BD4-8858-143641315658}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Users", "ICI.Clipping.WebApi.Users\ICI.Clipping.WebApi.Users.csproj", "{A73CF5D6-E3A5-4C72-9019-E18C78170318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Users", "src\ICI.Clipping.WebApi.Users\ICI.Clipping.WebApi.Users.csproj", "{A73CF5D6-E3A5-4C72-9019-E18C78170318}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{32DE1BA6-6758-44B9-B8E4-AF6E78226340}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
