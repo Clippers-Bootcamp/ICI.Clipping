@@ -1,4 +1,4 @@
-﻿using ICI.Clipping.Users.WebApi.Models;
+﻿using ICI.Clipping.WebApi.Users.Models;
 using ICI.Clipping.Application;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.Users.WebApi.Controllers
+namespace ICI.Clipping.WebApi.Users.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]

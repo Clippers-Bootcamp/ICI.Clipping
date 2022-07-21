@@ -1,0 +1,1 @@
+arquitetura/suporte	Marcocadastro/banco relacional	Alanapresentação do clipping/banco relacional	Lennoninteração do clipping/banco 	Fabioautenticação/banco redis	Paulotemplates front-endadministração	Felipe

@@ -1,4 +1,4 @@
-﻿namespace ICI.Clipping.Users.WebApi.Models
+﻿namespace ICI.Clipping.WebApi.Users.Models
 {
 	public class CheckUserModel : AuthorizeModel
 	{

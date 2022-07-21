@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.Clippings.WebApi.Models
+namespace ICI.Clipping.WebApi.Users.Models
 {
 	/// <summary>
 	/// Modelo para atualização de usuário existente.

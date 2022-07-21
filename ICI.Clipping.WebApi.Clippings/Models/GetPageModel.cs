@@ -1,7 +1,7 @@
 ﻿using ICI.Clipping.Application;
 using System;
 
-namespace ICI.Clipping.Clippings.WebApi.Models
+namespace ICI.Clipping.WebApi.Clippings.Models
 {
 	/// <summary>
 	/// Modelo para obtenção de uma página de recortes de notícia.

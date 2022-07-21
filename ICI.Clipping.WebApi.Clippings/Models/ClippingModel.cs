@@ -1,4 +1,4 @@
-﻿namespace ICI.Clipping.Clippings.WebApi.Models
+﻿namespace ICI.Clipping.WebApi.Clippings.Models
 {
 	/// <summary>
 	/// Representa um recorte de notícia.

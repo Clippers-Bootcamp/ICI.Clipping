@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.Clippings.WebApi.Models
+namespace ICI.Clipping.WebApi.Clippings.Models
 {
 	/// <summary>
 	/// Modelo listar clipping.

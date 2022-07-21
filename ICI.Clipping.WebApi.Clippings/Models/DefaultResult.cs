@@ -2,19 +2,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.Users.WebApi.Models
+namespace ICI.Clipping.WebApi.Clippings.Models
 {
 	/// <summary>
 	/// Modelo para atualização de usuário existente.
 	/// </summary>
-	public class ListProfilesResult : DefaultResult
+	public class DefaultResult : ActionResult, IStatusCodeActionResult
 	{
-		/// <summary>
-		/// Listagem de perfis do usuário.
-		/// </summary>
-		public List<ProfileEnum> Profiles;
+		public int? StatusCode { get; set; } = 200;
+
+		public DateTime ResultDate { get => DateTime.Now; }
 	}
 }

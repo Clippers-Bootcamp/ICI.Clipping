@@ -1,6 +1,6 @@
 ﻿using ICI.Clipping.Application;
 
-namespace ICI.Clipping.Users.WebApi.Models
+namespace ICI.Clipping.WebApi.Users.Models
 {
 	/// <summary>
 	/// Representa um modelo de entrada.

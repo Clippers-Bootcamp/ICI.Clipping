@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.Clippings.WebApi
+namespace ICI.Clipping.WebApi.Clippings
 {
 	public class Startup
 	{

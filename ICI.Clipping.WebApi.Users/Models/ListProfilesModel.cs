@@ -1,7 +1,7 @@
 ﻿using ICI.Clipping.Application;
 using System;
 
-namespace ICI.Clipping.Users.WebApi.Models
+namespace ICI.Clipping.WebApi.Users.Models
 {
 	/// <summary>
 	/// Modelo para pesquisa de perfis de um usuário.
