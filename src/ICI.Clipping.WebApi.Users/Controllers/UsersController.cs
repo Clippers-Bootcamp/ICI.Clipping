@@ -6,12 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ICI.Clipping.WebApi.Controllers;
+using ICI.Clipping.WebApi.Models;
 
 namespace ICI.Clipping.WebApi.Users.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class UsersController : ControllerBase
+	public class UsersController : ApiControllerBase
 	{
 		private readonly ILogger<UsersController> _logger;
 

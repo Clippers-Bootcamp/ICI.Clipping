@@ -1,5 +1,4 @@
-﻿using ICI.Clipping.WebApi.Ratings.Models;
-using ICI.Clipping.Application;
+﻿using ICI.Clipping.Application;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

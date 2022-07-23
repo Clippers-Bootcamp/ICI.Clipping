@@ -41,7 +41,7 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Data/hora de publicação.
 		/// </summary>
-		public DateTime PublishDateTime { get; set; }
+		public DateTime Publish { get; set; }
 
 		/// <summary>
 		/// Média de pontuação da notícia.

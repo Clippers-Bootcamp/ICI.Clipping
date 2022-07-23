@@ -8,11 +8,11 @@
 		/// <summary>
 		/// O usuário está lendo os recortes de notícia.
 		/// </summary>
-		Reader,
+		Reader = 1,
 
 		/// <summary>
 		/// O usuário está editando os recortes de notícia.
 		/// </summary>
-		Editor,
+		Editor = 2,
 	}
 }

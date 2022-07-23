@@ -10,9 +10,9 @@
 			this.Id = System.Guid.Empty;
 			this.Email = "anonymous@clipping.sys";
 			this.Login = "anonymous";
-			this.Nome = "Anonymous User";
+			this.Name = "Anonymous User";
 			this.Profile = ProfileEnum.Reader;
-			this.Senha = "";
+			this.Password = "";
 		}
 	}
 }

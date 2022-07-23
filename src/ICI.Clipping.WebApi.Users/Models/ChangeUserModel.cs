@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.WebApi.Models;
 using System;
 
 namespace ICI.Clipping.WebApi.Users.Models

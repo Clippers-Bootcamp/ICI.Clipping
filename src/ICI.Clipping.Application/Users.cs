@@ -22,10 +22,10 @@ namespace ICI.Clipping.Application
 		public User Create(string nome, string login, string email, string senha)
 		{
 			var user = new User();
-			user.Nome = nome;
+			user.Name = nome;
 			user.Login = login;
 			user.Email = email;
-			user.Senha = senha;
+			user.Password = senha;
 			user.Checked = false;
 			return Create(user);
 		}

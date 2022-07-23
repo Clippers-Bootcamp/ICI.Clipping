@@ -24,7 +24,7 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Nome do usuário.
 		/// </summary>
-		public string Nome { get; set; }
+		public string Name { get; set; }
 
 		/// <summary>
 		/// Login do usuário.
@@ -39,7 +39,7 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Senha do usuário.
 		/// </summary>
-		public string Senha { private get; set; }  //Marshal.SecureStringToBSTR
+		public string Password { private get; set; }  //Marshal.SecureStringToBSTR
 		
 		/// <summary>
 		/// Determina se o perfil do usuário foi validado.

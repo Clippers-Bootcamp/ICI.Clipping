@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\ICI.Clipping.WebApi\ICI.Clipping.WebApi.csproj" />
+    <ProjectReference Include="..\src\ICI.Clipping.Application\ICI.Clipping.Application.csproj" />
+  </ItemGroup>
+
+
+</Project>

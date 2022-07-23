@@ -39,7 +39,7 @@ namespace ICI.Clipping.Application
 			clip.Synopsis = synopsis;
 			clip.Link = link;
 			clip.NewsChannel = newsChannel;
-			clip.PublishDateTime = publishDate;
+			clip.Publish = publishDate;
 			return Create(clip);
 		}
 

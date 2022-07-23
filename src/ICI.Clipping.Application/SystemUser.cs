@@ -10,9 +10,9 @@
 			this.Id = System.Guid.Empty;
 			this.Email = "system@clipping.sys";
 			this.Login = "system";
-			this.Nome = "System User";
+			this.Name = "System User";
 			this.Profile = ProfileEnum.Editor;
-			this.Senha = "";
+			this.Password = "";
 		}
 	}
 }

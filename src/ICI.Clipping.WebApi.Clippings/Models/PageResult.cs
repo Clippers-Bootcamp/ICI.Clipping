@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace ICI.Clipping.WebApi.Clippings.Models
 {
 	/// <summary>
-	/// Modelo listar clipping.
+	/// Modelo de resultado de listagem de recorte de notícias.
 	/// </summary>
 	public class PageResult : DefaultResult
 	{
