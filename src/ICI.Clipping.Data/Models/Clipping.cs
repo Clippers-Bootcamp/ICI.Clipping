@@ -15,6 +15,6 @@ namespace ICI.Clipping.Data.Models
         public string Link { get; set; }
         public string NewsChannel { get; set; }
         public string Local { get; set; }
-        public DateTime PublishDateTime { get; set; }
+        public DateTime Publish { get; set; }
     }
 }

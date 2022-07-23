@@ -68,7 +68,7 @@ namespace ICI.Clipping.Data.Models
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PublishDateTime).HasColumnType("datetime");
+                entity.Property(e => e.Publish).HasColumnType("datetime");
 
                 entity.Property(e => e.Synopsis)
                     .IsRequired()

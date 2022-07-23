@@ -29,7 +29,7 @@
 		/// Data de publicação do recorte de notícia.
 		/// </summary>
 		/// <remarks>String para poder enviar já formatado.</remarks>
-		public string PublishDateTime { get; set; }
+		public string Publish { get; set; }
 
 		/// <summary>
 		/// Link completo para o canal de divulgação do recorte de notícia.
