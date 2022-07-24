@@ -11,7 +11,7 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Permissão para interagir com recortes de notícia.
 		/// </summary>
-		Interactive = 1,
+		Reader = 1,
 
 		/// <summary>
 		/// Permissão para editar cadastros.

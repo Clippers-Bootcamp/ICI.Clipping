@@ -196,9 +196,6 @@
               },
               "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
                 "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj"
-              },
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
               }
             }
           }
@@ -271,8 +268,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
+              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
+                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
               }
             }
           }

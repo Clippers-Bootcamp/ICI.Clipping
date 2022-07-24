@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "lrIC86QFRzZtwyGfQOCXYrcd2x91gXMifOcpwqULfIyMgIqw8FnwmC0vlxvPPsCUCxAs9WqCPaWUTWpRGWB8Bw==",
-  "success": false,
+  "dgSpecHash": "4h+sp7V7h8r7Xuuod4Bff3qTHmM+jQiLDL9haBT+vLgCjvG3EE9RA+WO/+cmK62rmRjsdZDHIQnUqwWm5XpEwQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\netch\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
@@ -112,15 +112,5 @@
     "C:\\Users\\netch\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }

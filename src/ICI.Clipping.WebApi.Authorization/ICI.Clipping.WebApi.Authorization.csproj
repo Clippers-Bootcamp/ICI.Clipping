@@ -9,10 +9,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-    <ProjectReference Include="..\ICI.Clipping.Application\ICI.Clipping.Application.csproj" />
-    <ProjectReference Include="..\ICI.Clipping.WebApi\ICI.Clipping.WebApi.csproj" />
-    <ProjectReference Include="..\src\ICI.Clipping.Application\ICI.Clipping.Application.csproj" />
-  </ItemGroup>
+	  <ProjectReference Include="..\ICI.Clipping.Application\ICI.Clipping.Application.csproj" />
+	  <ProjectReference Include="..\ICI.Clipping.WebApi\ICI.Clipping.WebApi.csproj" />
+	</ItemGroup>
 
 
 </Project>

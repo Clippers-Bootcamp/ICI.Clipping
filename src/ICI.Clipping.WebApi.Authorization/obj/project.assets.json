@@ -1680,7 +1680,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": "1.0.0"
+          "ICI.Clipping.Application": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ICI.Clipping.WebApi.dll": {}
@@ -6254,7 +6254,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
       "ICI.Clipping.Application >= 1.0.0",
       "ICI.Clipping.WebApi >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -6302,9 +6301,6 @@
             },
             "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
               "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj"
-            },
-            "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
-              "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
             }
           }
         }
@@ -6345,16 +6341,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }
