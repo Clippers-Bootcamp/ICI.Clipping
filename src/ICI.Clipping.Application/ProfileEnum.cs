@@ -1,17 +1,20 @@
-﻿namespace ICI.Clipping.Application
+﻿using System;
+
+namespace ICI.Clipping.Application
 {
 	/// <summary>
 	/// Determina o perfil que um usuário está usando para interagir com o sistema
 	/// </summary>
+	[Flags]
 	public enum ProfileEnum : byte
 	{
 		/// <summary>
-		/// O usuário está lendo os recortes de notícia.
+		/// Permissão para interagir com recortes de notícia.
 		/// </summary>
-		Reader = 1,
+		Interactive = 1,
 
 		/// <summary>
-		/// O usuário está editando os recortes de notícia.
+		/// Permissão para editar cadastros.
 		/// </summary>
 		Editor = 2,
 	}

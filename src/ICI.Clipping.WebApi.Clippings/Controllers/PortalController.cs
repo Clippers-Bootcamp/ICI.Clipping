@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
@@ -21,6 +22,7 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 		}
 
 		[HttpPost]
+		[AllowAnonymous]
 		[Route("[action]")]
 		public PageResult GetPage([FromBody] GetPageModel model)
 		{

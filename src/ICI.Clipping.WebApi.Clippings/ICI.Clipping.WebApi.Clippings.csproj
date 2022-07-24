@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ICI.Clipping.WebApi\ICI.Clipping.WebApi.csproj" />
     <ProjectReference Include="..\ICI.Clipping.Application\ICI.Clipping.Application.csproj" />
+    <ProjectReference Include="..\ICI.Clipping.WebApi\ICI.Clipping.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

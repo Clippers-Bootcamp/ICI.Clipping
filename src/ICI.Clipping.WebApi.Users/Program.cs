@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Users
+namespace ICI.Clipping.WebApi.Editor
 {
 	public class Program
 	{

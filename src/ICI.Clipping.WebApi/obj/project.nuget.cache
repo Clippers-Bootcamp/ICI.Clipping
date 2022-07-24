@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "pGpw63yiZNkc56PWa5y9jjUMd8ywCUkK9dq9jYEmEuwq9zAqhAl5RhmU9FmPGF/qN4cZXrsGfPHmxySVY5JNww==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

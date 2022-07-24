@@ -6,16 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Clippings.Models
+namespace ICI.Clipping.WebApi.Editor.Models
 {
 	/// <summary>
-	/// Modelo de resultado de listagem de recorte de notícias.
+	/// Modelo de resultado de listagem de usuários.
 	/// </summary>
-	public class PageResult : DefaultResult
+	public class UserResult : DefaultResult
 	{
 		/// <summary>
-		/// Listagem de recortes de notícias.
+		/// Listagem de retorno.
 		/// </summary>
-		public List<ClippingModel> List;
+		public List<UserModel> List;
 	}
 }

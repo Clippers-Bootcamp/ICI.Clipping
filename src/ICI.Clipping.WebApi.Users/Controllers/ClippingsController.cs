@@ -1,24 +1,23 @@
-﻿using ICI.Clipping.WebApi.Editor.Models;
-using ICI.Clipping.Application;
+﻿using ICI.Clipping.Application;
+using ICI.Clipping.WebApi.Editor.Models;
+using ICI.Clipping.WebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ICI.Clipping.WebApi.Controllers;
-using ICI.Clipping.WebApi.Models;
-using Microsoft.AspNetCore.Authorization;
 
-namespace ICI.Clipping.WebApi.Editor.Controllers
+namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class UsersController : ApiControllerBase
+	public class ClippingsController : ControllerBase
 	{
-		private readonly ILogger<UsersController> _logger;
+		private readonly ILogger<ClippingsController> _logger;
 
-		public UsersController(ILogger<UsersController> logger)
+		public ClippingsController(ILogger<ClippingsController> logger)
 		{
 			_logger = logger;
 		}
@@ -26,7 +25,7 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 		[HttpPost]
 		[Route("[action]")]
 		[Authorize(Policy.Editor)]
-		public DefaultResult Create([FromBody] UserModel model)
+		public DefaultResult Create([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
@@ -36,7 +35,7 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 		[HttpPost]
 		[Route("[action]")]
 		[Authorize(Policy.Editor)]
-		public DefaultResult Update([FromBody] UserModel model)
+		public DefaultResult Update([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
@@ -46,7 +45,7 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 		[HttpPost]
 		[Route("[action]")]
 		[Authorize(Policy.Editor)]
-		public DefaultResult Delete([FromBody] UserModel model)
+		public DefaultResult Delete([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
@@ -56,7 +55,7 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 		[HttpPost]
 		[Route("[action]")]
 		[Authorize(Policy.Editor)]
-		public DefaultResult List([FromBody] UserModel model, ushort quantity)
+		public DefaultResult List([FromBody] ClippingModel model, ushort quantity)
 		{
 			//todo: usar as propriedades preenchidas de UserModel como filtro
 			var response = new DefaultResult();
