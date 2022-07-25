@@ -8,12 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using ICI.Clipping.WebApi.Models;
 using Microsoft.AspNetCore.Authorization;
+using ICI.Clipping.WebApi.Controllers;
 
 namespace ICI.Clipping.WebApi.Authorization.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class AuthorizationController : ControllerBase
+	public class AuthorizationController : ApiControllerBase
 	{
 		private readonly ILogger<AuthorizationController> _logger;
 

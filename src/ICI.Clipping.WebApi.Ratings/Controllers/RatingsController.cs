@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.WebApi.Controllers;
 using ICI.Clipping.WebApi.Models;
 using ICI.Clipping.WebApi.Ratings.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -14,7 +15,7 @@ namespace ICI.Clipping.WebApi.Ratings.Controllers
 	[ApiController]
 	[Route("[controller]")]
 	[Authorize(Policy = "Editor")]
-	public class RatingsController : ControllerBase
+	public class RatingsController : ApiControllerBase
 	{
 		private readonly ILogger<RatingsController> _logger;
 

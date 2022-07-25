@@ -7,16 +7,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using ICI.Clipping.WebApi.Controllers;
 
 namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class PortalController : ControllerBase
+	public class ClippingsController : ApiControllerBase
 	{
-		private readonly ILogger<PortalController> _logger;
+		private readonly ILogger<ClippingsController> _logger;
 
-		public PortalController(ILogger<PortalController> logger)
+		public ClippingsController(ILogger<ClippingsController> logger)
 		{
 			_logger = logger;
 		}

@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.WebApi.Controllers;
 using ICI.Clipping.WebApi.Editor.Models;
 using ICI.Clipping.WebApi.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -13,7 +14,7 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class ClippingsController : ControllerBase
+	public class ClippingsController : ApiControllerBase
 	{
 		private readonly ILogger<ClippingsController> _logger;
 

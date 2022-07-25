@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.WebApi.Models;
+using System;
 
 namespace ICI.Clipping.WebApi.Ratings.Models
 {
@@ -8,9 +9,14 @@ namespace ICI.Clipping.WebApi.Ratings.Models
 	public class RateModel : AuthorizeModel
 	{
 		/// <summary>
+		/// Código do recorte de notícia.
+		/// </summary>
+		public Guid ClippingId { get; set; }
+
+		/// <summary>
 		/// Ranqueamento fornecido pelo usuário.
 		/// </summary>
-		public float Rate { get; set; }
+		public byte Rate { get; set; }
 
 	}
 }
