@@ -14,20 +14,19 @@ namespace ICI.Clipping.WebApi.Ratings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	[Authorize(Policy = "Editor")]
-	public class RatingsController : ApiControllerBase
+	public class RatingController : ApiControllerBase
 	{
-		private readonly ILogger<RatingsController> _logger;
+		private readonly ILogger<RatingController> _logger;
 
-		public RatingsController(ILogger<RatingsController> logger)
+		public RatingController(ILogger<RatingController> logger)
 		{
 			_logger = logger;
 		}
 
 		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Interactive)]
-		public DefaultResult Rate ([FromBody] RateModel model)
+		[Route("")]
+		////[Authorize(Policy.Interactive)]
+		public DefaultResult Post ([FromBody] RateModel model)
 		{
 			throw new NotImplementedException();
 		}

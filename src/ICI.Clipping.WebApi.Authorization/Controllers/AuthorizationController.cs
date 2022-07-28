@@ -24,18 +24,19 @@ namespace ICI.Clipping.WebApi.Authorization.Controllers
 		}
 
 		[HttpPost]
-		[AllowAnonymous]
 		public AuthResult Login([FromBody] LoginModel model) { 
 			throw new NotImplementedException();
 		}
 
 
 		[HttpPost]
-		[Authorize(Policy.Editor)]
-		[Authorize(Policy.Interactive)]
+		////[Authorize(Policy.Editor)]
+		////[Authorize(Policy.Interactive)]
 		public AuthResult Validate([FromBody] string token)
 		{
 			throw new NotImplementedException();
 		}
+
+
 	}
 }

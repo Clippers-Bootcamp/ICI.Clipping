@@ -14,38 +14,36 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class ClippingsController : ApiControllerBase
+	////[Authorize(Policy.Editor)]
+	public class ClippingController : ApiControllerBase
 	{
-		private readonly ILogger<ClippingsController> _logger;
+		private readonly ILogger<ClippingController> _logger;
 
-		public ClippingsController(ILogger<ClippingsController> logger)
+		public ClippingController(ILogger<ClippingController> logger)
 		{
 			_logger = logger;
 		}
 
 		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult Create([FromBody] ClippingModel model)
+		[Route("")]
+		public DefaultResult Post([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult Update([FromBody] ClippingModel model)
+		[HttpPut]
+		[Route("")]
+		public DefaultResult Put([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
+		[HttpDelete]
+		[Route("")]
 		public DefaultResult Delete([FromBody] ClippingModel model)
 		{
 			var response = new DefaultResult();
@@ -53,10 +51,9 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult List([FromBody] ClippingModel model, ushort quantity)
+		[HttpGet]
+		[Route("")]
+		public DefaultResult Get(ClippingModel model, ushort quantity)
 		{
 			//todo: usar as propriedades preenchidas de UserModel como filtro
 			var response = new DefaultResult();

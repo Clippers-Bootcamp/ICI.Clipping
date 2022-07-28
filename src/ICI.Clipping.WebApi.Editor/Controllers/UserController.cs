@@ -14,38 +14,36 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class UsersController : ApiControllerBase
+	////[Authorize(Policy.Editor)]
+	public class UserController : ApiControllerBase
 	{
-		private readonly ILogger<UsersController> _logger;
+		private readonly ILogger<UserController> _logger;
 
-		public UsersController(ILogger<UsersController> logger)
+		public UserController(ILogger<UserController> logger)
 		{
 			_logger = logger;
 		}
 
 		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult Create([FromBody] UserModel model)
+		[Route("")]
+		public DefaultResult Post([FromBody] UserModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult Update([FromBody] UserModel model)
+		[HttpPut]
+		[Route("")]
+		public DefaultResult Put([FromBody] UserModel model)
 		{
 			var response = new DefaultResult();
 			throw new NotImplementedException();
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
+		[HttpDelete]
+		[Route("")]
 		public DefaultResult Delete([FromBody] UserModel model)
 		{
 			var response = new DefaultResult();
@@ -53,10 +51,9 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 			return response;
 		}
 
-		[HttpPost]
-		[Route("[action]")]
-		[Authorize(Policy.Editor)]
-		public DefaultResult List([FromBody] UserModel model, ushort quantity)
+		[HttpGet]
+		[Route("")]
+		public DefaultResult Get(UserModel model, ushort quantity)
 		{
 			//todo: usar as propriedades preenchidas de UserModel como filtro
 			var response = new DefaultResult();

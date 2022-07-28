@@ -13,19 +13,18 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class ClippingsController : ApiControllerBase
+	public class ClippingController : ApiControllerBase
 	{
-		private readonly ILogger<ClippingsController> _logger;
+		private readonly ILogger<ClippingController> _logger;
 
-		public ClippingsController(ILogger<ClippingsController> logger)
+		public ClippingController(ILogger<ClippingController> logger)
 		{
 			_logger = logger;
 		}
 
-		[HttpPost]
-		[AllowAnonymous]
-		[Route("[action]")]
-		public PageResult GetPage([FromBody] GetPageModel model)
+		[HttpGet]
+		[Route("")]
+		public PageResult Get(GetPageModel model)
 		{
 			var response = new PageResult();
 			throw new NotImplementedException();

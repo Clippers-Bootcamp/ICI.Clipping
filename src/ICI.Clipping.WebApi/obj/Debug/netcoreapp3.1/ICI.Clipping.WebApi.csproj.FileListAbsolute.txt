@@ -144,3 +144,9 @@ C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netco
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.dll
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.pdb
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.genruntimeconfig.cache
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

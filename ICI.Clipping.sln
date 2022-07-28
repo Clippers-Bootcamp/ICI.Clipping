@@ -21,13 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Authorization", "src\ICI.Clipping.WebApi.Authorization\ICI.Clipping.WebApi.Authorization.csproj", "{FAA27A14-8636-4453-9C73-50960C027BB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Clippings", "src\ICI.Clipping.WebApi.Clippings\ICI.Clipping.WebApi.Clippings.csproj", "{952099CB-FAC8-44AE-9388-5D2013D84FCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Clipping", "src\ICI.Clipping.WebApi.Clipping\ICI.Clipping.WebApi.Clipping.csproj", "{952099CB-FAC8-44AE-9388-5D2013D84FCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Ratings", "src\ICI.Clipping.WebApi.Ratings\ICI.Clipping.WebApi.Ratings.csproj", "{71FC46F7-5E23-4136-833A-15E13F06FAED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Score", "src\ICI.Clipping.WebApi.Score\ICI.Clipping.WebApi.Score.csproj", "{71FC46F7-5E23-4136-833A-15E13F06FAED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Editor", "src\ICI.Clipping.WebApi.Users\ICI.Clipping.WebApi.Editor.csproj", "{B317CB2B-B048-4FA1-9FBA-2C5392FE2342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Editor", "src\ICI.Clipping.WebApi.Editor\ICI.Clipping.WebApi.Editor.csproj", "{B317CB2B-B048-4FA1-9FBA-2C5392FE2342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICI.Clipping.Web.Portal", "src\ICI.Clipping.Web.Portal\ICI.Clipping.Web.Portal.csproj", "{BD9D5656-FDAA-40C9-854F-332E87216787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Web.Portal", "src\ICI.Clipping.Web.Portal\ICI.Clipping.Web.Portal.csproj", "{BD9D5656-FDAA-40C9-854F-332E87216787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
