@@ -9,6 +9,11 @@ namespace ICI.Clipping.Application
 	public enum ProfileEnum : byte
 	{
 		/// <summary>
+		/// Sem permissões, somente leitura.
+		/// </summary>
+		None = 0,
+
+		/// <summary>
 		/// Permissão para interagir com recortes de notícia.
 		/// </summary>
 		Reader = 1,
@@ -17,5 +22,10 @@ namespace ICI.Clipping.Application
 		/// Permissão para editar cadastros.
 		/// </summary>
 		Editor = 2,
+
+		/// <summary>
+		/// Permissão total.
+		/// </summary>
+		Admin = 4,
 	}
 }

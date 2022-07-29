@@ -17,11 +17,6 @@ namespace ICI.Clipping.Application
 		public Guid Id { get; internal set; }
 
 		/// <summary>
-		/// Tipo de interação atual.
-		/// </summary>
-		public ProfileEnum Profile { get; set; }
-
-		/// <summary>
 		/// Nome do usuário.
 		/// </summary>
 		public string Name { get; set; }
@@ -39,12 +34,17 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Senha do usuário.
 		/// </summary>
-		public string Password { private get; set; }  //Marshal.SecureStringToBSTR
+		public string Password { get; set; }  //Marshal.SecureStringToBSTR
 		
 		/// <summary>
 		/// Determina se o perfil do usuário foi validado.
 		/// </summary>
 		public bool Checked { get; set; }
+
+		/// <summary>
+		/// Perfis do usuário.
+		/// </summary>
+		public ProfileEnum Profile { get; set; }
 
 		/// <summary>
 		/// Verifica se o usuário atual é válido.

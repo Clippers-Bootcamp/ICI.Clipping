@@ -4,22 +4,22 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace ICI.Clipping.Data.Models
+namespace ICI.Clipping.Data
 {
-    public partial class clippingContext : DbContext
+    public partial class ClippingContext : DbContext
     {
-        public clippingContext()
+        public ClippingContext()
         {
         }
 
-        public clippingContext(DbContextOptions<clippingContext> options)
+        public ClippingContext(DbContextOptions<ClippingContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Clipping> Clippings { get; set; }
-        public virtual DbSet<Score> Scores { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Models.Clipping> Clippings { get; set; }
+        public virtual DbSet<Models.Score> Scores { get; set; }
+        public virtual DbSet<Models.User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,7 +34,7 @@ namespace ICI.Clipping.Data.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
 
-            modelBuilder.Entity<Clipping>(entity =>
+            modelBuilder.Entity<Models.Clipping>(entity =>
             {
                 entity.ToTable("Clipping");
 
@@ -76,7 +76,7 @@ namespace ICI.Clipping.Data.Models
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Score>(entity =>
+            modelBuilder.Entity<Models.Score>(entity =>
             {
                 entity.ToTable("Score");
 
@@ -91,7 +91,7 @@ namespace ICI.Clipping.Data.Models
                     .HasDefaultValueSql("(getdate())");
             });
 
-            modelBuilder.Entity<User>(entity =>
+            modelBuilder.Entity<Models.User>(entity =>
             {
                 entity.ToTable("User");
 

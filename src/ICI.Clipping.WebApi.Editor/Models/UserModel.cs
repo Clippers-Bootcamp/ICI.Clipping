@@ -17,7 +17,12 @@ namespace ICI.Clipping.WebApi.Editor.Models
 		/// <summary>
 		/// Nome do usuário.
 		/// </summary>
-		public string Nome { get; set; }
+		public string Name { get; set; }
+
+		/// <summary>
+		/// Login do usuário.
+		/// </summary>
+		public string Login { get; set; }
 
 		/// <summary>
 		/// Email do usuário.
@@ -27,7 +32,7 @@ namespace ICI.Clipping.WebApi.Editor.Models
 		/// <summary>
 		/// Senha do usuário.
 		/// </summary>
-		public string Senha { get; set; }
+		public string Password { get; set; }
 
 		/// <summary>
 		/// Perfil de leitor.
@@ -39,5 +44,9 @@ namespace ICI.Clipping.WebApi.Editor.Models
 		/// </summary>
 		public bool? IsEditor { get; set; }
 
+		/// <summary>
+		/// Perfil de administrador.
+		/// </summary>
+		public bool? IsAdmin { get; set; }
 	}
 }

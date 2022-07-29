@@ -29,6 +29,14 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 		public DefaultResult Post([FromBody] UserModel model)
 		{
 			var response = new DefaultResult();
+			var profile = ProfileEnum.None;
+			if (model?.IsReader ?? false) profile &= ProfileEnum.Reader;
+			if (model?.IsEditor ?? false) profile &= ProfileEnum.Editor;
+			if (model?.IsAdmin ?? false) profile &= ProfileEnum.Admin;
+
+			var user = Application.Users.Create(model.Name, model.Login, model.Email, model.Password, profile);
+			user.Id = Guid.NewGuid();
+
 			throw new NotImplementedException();
 			return response;
 		}
