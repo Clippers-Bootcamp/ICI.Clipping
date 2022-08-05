@@ -34,8 +34,8 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Senha do usuário.
 		/// </summary>
-		public string Password { get; set; }  //Marshal.SecureStringToBSTR
-		
+		public string Password { internal get; set; }  //Marshal.SecureStringToBSTR
+
 		/// <summary>
 		/// Determina se o perfil do usuário foi validado.
 		/// </summary>
@@ -54,7 +54,27 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		internal static bool IsValid(User user, out Dictionary<string, string> errors)
 		{
-			throw new NotImplementedException();
+			var errdic = new Dictionary<string, string>();
+			Func<string, string, bool> addError = (prop, msg) => {
+				errdic.Add(prop, msg);
+				return false;
+			};
+
+			var valid = true;
+			valid &= Validators.IsEmail(user.Email) || 
+						addError(nameof(user.Email), "Email inválido");
+			valid &= Validators.LengthBetween(user.Login, 5, 15) || 
+						addError(nameof(user.Login), "Login deve conter de 5 a 15 caracteres");
+			valid &= Validators.LengthBetween(user.Name, 3, 30) || 
+						addError(nameof(user.Name), "Nome deve conter de 3 a 30 caracteres");
+			valid &= Validators.LengthBetween(user.Password, 5, 10) || 
+						addError(nameof(user.Password), "Senha deve conter de 5 a 10 caracteres");
+			valid &= Validators.Includes(user.Password, "[0-9]", "[a-z]", "[A-Z]", @"[""'!@#$%¨&*()_+=`{´\[^}~\]<>:?,.;/|\-]") ||
+						addError(nameof(user.Password), "Senha deve conter caracteres numéricos, letras minúsculas, letras maiúsculas e caracteres especiais do teclado");
+			valid &= user.Profile != ProfileEnum.None || 
+						addError(nameof(user.Profile), "É necessário especificar ao menos um perfil para o usuário");
+			errors = errdic;
+			return valid;
 		}
 
 		/// <summary>

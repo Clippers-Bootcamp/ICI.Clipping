@@ -166,3 +166,4 @@ C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi.Authorization\o
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi.Authorization\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.Authorization.dll
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi.Authorization\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.Authorization.pdb
 C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi.Authorization\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.Authorization.genruntimeconfig.cache
+C:\Users\netch\Source\Repos\ICI.Clipping\src\ICI.Clipping.WebApi.Authorization\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

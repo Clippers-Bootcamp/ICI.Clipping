@@ -34,8 +34,7 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 			if (model?.IsEditor ?? false) profile &= ProfileEnum.Editor;
 			if (model?.IsAdmin ?? false) profile &= ProfileEnum.Admin;
 
-			var user = Application.Users.Create(model.Name, model.Login, model.Email, model.Password, profile);
-			user.Id = Guid.NewGuid();
+			////var user = Application.Users.Create(model.Name, model.Login, model.Email, model.Password, profile);
 
 			throw new NotImplementedException();
 			return response;

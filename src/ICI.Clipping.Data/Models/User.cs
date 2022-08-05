@@ -16,5 +16,6 @@ namespace ICI.Clipping.Data.Models
         public string Password { get; set; }
         public string Email { get; set; }
         public bool Checked { get; set; }
+        public bool Deleted { get; set; } = false;
     }
 }

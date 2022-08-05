@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ICI.Clipping.Data;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ICI.Clipping.Application
@@ -7,20 +9,25 @@ namespace ICI.Clipping.Application
 	/// <summary>
 	/// Representa a listagem de recortes de notícia.
 	/// </summary>
-	public class Clippings
+	public class Clippings : IDisposable
 	{
+		private readonly ClippingContext Context;
+
 		/// <summary>
 		/// Usuário atual que está utilizando o clipping.
 		/// </summary>
-		public User CurrentUser { get; set; } = new AnonymousUser();
+		public readonly User CurrentUser;
 
-		public Clippings(User user)
+		public Clippings(ClippingContext _context, User user)
 		{
+			user ??= new AnonymousUser();
+
 			var errors = new Dictionary<string, string>();
 			if (!User.IsValid(user, out errors))
 				throw new InvalidObjectException(errors);
 
-			this.CurrentUser = user;
+			Context = _context;
+			CurrentUser = user;
 		}
 
 		/// <summary>
@@ -31,29 +38,38 @@ namespace ICI.Clipping.Application
 		/// <param name="link"></param>
 		/// <param name="newsChannel"></param>
 		/// <param name="publishDate"></param>
-		/// <returns></returns>
-		public Clipping Create(string image, string synopsis, string link, string newsChannel, DateTime publishDate)
+		public Guid Create(string image, string synopsis, string link, string newsChannel, DateTime publishDate)
 		{
-			var clip = new Clipping();
-			clip.Image = image;
-			clip.Synopsis = synopsis;
-			clip.Link = link;
-			clip.NewsChannel = newsChannel;
-			clip.Publish = publishDate;
-			return Create(clip);
+			var clipping = new Clipping();
+			clipping.Image = image;
+			clipping.Synopsis = synopsis;
+			clipping.Link = link;
+			clipping.NewsChannel = newsChannel;
+			clipping.Publish = publishDate;
+			return Create(clipping);
 		}
 
 		/// <summary>
 		/// Cria um recorte e salva.
 		/// </summary>
 		/// <param name="clipping"></param>
-		public Clipping Create(Clipping clipping)
+		public Guid Create(Clipping clipping)
 		{
 			var errors = new Dictionary<string, string>();
 			if (!Clipping.IsValid(clipping, out errors))
 				throw new InvalidObjectException(errors);
 
-			throw new NotImplementedException();
+			var ent = new Data.Models.Clipping();
+			ent.Id = Guid.NewGuid();
+			ent.Image = clipping.Image;
+			ent.Link = clipping.Link;
+			ent.Local = clipping.Local;
+			ent.NewsChannel = clipping.NewsChannel;
+			ent.Publish = clipping.Publish;
+			ent.Synopsis = clipping.Synopsis;
+			Context.Clippings.Add(ent);
+			Context.SaveChanges();
+			return ent.Id;
 		}
 
 		/// <summary>
@@ -71,18 +87,30 @@ namespace ICI.Clipping.Application
 		/// <param name="id"></param>
 		public void Remove(Guid id)
 		{
-			throw new NotImplementedException();
+			var ent = Context.Clippings.Find(id);
+			Context.Clippings.Remove(ent);
+			Context.SaveChanges();
 		}
 
 		/// <summary>
 		/// Listar uma quantidade específica de clipping.
 		/// </summary>
-		/// <param name="recFrom"></param>
-		/// <param name="recTo"></param>
+		/// <param name="from"></param>
+		/// <param name="to"></param>
 		/// <returns></returns>
-		public IEnumerable<Clipping> ListRecords(uint recFrom, uint recTo, OrderEnum order = OrderEnum.Descending)
+		public IEnumerable<Clipping> ListRecords(uint from, uint to, OrderEnum order = OrderEnum.Descending)
 		{
-			throw new NotImplementedException();
+			foreach (var ent in Context.Clippings.Skip((int)from).Take((int)(to - from))) {
+				yield return new Clipping() { 
+					Id = ent.Id,
+					Image = ent.Image,
+					Link = ent.Link,
+					Local = ent.Local,
+					NewsChannel = ent.NewsChannel,
+					Publish = ent.Publish,
+					Synopsis = ent.Synopsis,
+				};
+			}
 		}
 
 		/// <summary>
@@ -92,7 +120,21 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		public IEnumerable<Clipping> ListRecords(uint recs, OrderEnum order = OrderEnum.Descending)
 		{
-			throw new NotImplementedException();
+			return ListRecords(0, recs, order);
+		}
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (disposing) {
+				Context.Dispose();
+			}
+		}
+
+		public void Dispose()
+		{
+			// Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+			Dispose(disposing: true);
+			GC.SuppressFinalize(this);
 		}
 	}
 

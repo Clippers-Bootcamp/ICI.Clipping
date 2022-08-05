@@ -12,7 +12,7 @@
 			this.Login = "system";
 			this.Name = "System User";
 			this.Profile = ProfileEnum.Editor;
-			this.Password = "";
+			this.Password = "8D7BAFF33F7E";
 		}
 	}
 }

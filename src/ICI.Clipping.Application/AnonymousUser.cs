@@ -12,7 +12,7 @@
 			this.Login = "anonymous";
 			this.Name = "Anonymous User";
 			this.Profile = ProfileEnum.Reader;
-			this.Password = "";
+			this.Password = "B3AA65EB8408";
 		}
 	}
 }
