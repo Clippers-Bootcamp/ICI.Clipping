@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF34ABEB-A9E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C1DA61FB-16B8-46D3-A9E6-DE9A037EC61D}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Scaffold-DbContext.ps1 = Scaffold-DbContext.ps1
 		doc\tasks.txt = doc\tasks.txt
 	EndProjectSection
@@ -29,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.WebApi.Editor"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Web.Portal", "src\ICI.Clipping.Web.Portal\ICI.Clipping.Web.Portal.csproj", "{BD9D5656-FDAA-40C9-854F-332E87216787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICI.Clipping.Application.Test", "test\ICI.Clipping.Application.Test\ICI.Clipping.Application.Test.csproj", "{9C5BA839-880B-4418-BD9A-128FB3CD811E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICI.Clipping.Application.Test", "test\ICI.Clipping.Application.Test\ICI.Clipping.Application.Test.csproj", "{9C5BA839-880B-4418-BD9A-128FB3CD811E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
