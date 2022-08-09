@@ -18,12 +18,12 @@ namespace ICI.Clipping.Application
 		/// </summary>
 		public readonly User CurrentUser;
 
-		public Clippings(ClippingContext _context, User user)
+		public Clippings(ClippingContext _context, User user = default(User))
 		{
 			user ??= new AnonymousUser();
 
-			var errors = new Dictionary<string, string>();
-			if (!User.IsValid(user, out errors))
+			var errors = new ErrorDictionary();
+			if (!user.IsValid(out errors))
 				throw new InvalidObjectException(errors);
 
 			Context = _context;
@@ -55,7 +55,11 @@ namespace ICI.Clipping.Application
 		/// <param name="clipping"></param>
 		public Guid Create(Clipping clipping)
 		{
-			var errors = new Dictionary<string, string>();
+			if (CurrentUser is AnonymousUser)
+				throw new InvalidUserException();
+			
+
+			var errors = new ErrorDictionary();
 			if (!Clipping.IsValid(clipping, out errors))
 				throw new InvalidObjectException(errors);
 
@@ -67,6 +71,7 @@ namespace ICI.Clipping.Application
 			ent.NewsChannel = clipping.NewsChannel;
 			ent.Publish = clipping.Publish;
 			ent.Synopsis = clipping.Synopsis;
+			ent.Contents = clipping.Contents;
 			Context.Clippings.Add(ent);
 			Context.SaveChanges();
 			return ent.Id;
@@ -98,7 +103,7 @@ namespace ICI.Clipping.Application
 		/// <param name="from"></param>
 		/// <param name="to"></param>
 		/// <returns></returns>
-		public IEnumerable<Clipping> ListRecords(uint from, uint to, OrderEnum order = OrderEnum.Descending)
+		public IEnumerable<Clipping> List(uint from, uint to, OrderEnum order = OrderEnum.Descending)
 		{
 			foreach (var ent in Context.Clippings.Skip((int)from).Take((int)(to - from))) {
 				yield return new Clipping() { 
@@ -109,6 +114,7 @@ namespace ICI.Clipping.Application
 					NewsChannel = ent.NewsChannel,
 					Publish = ent.Publish,
 					Synopsis = ent.Synopsis,
+					Contents = ent.Contents,
 				};
 			}
 		}
@@ -118,9 +124,9 @@ namespace ICI.Clipping.Application
 		/// </summary>
 		/// <param name="recs"></param>
 		/// <returns></returns>
-		public IEnumerable<Clipping> ListRecords(uint recs, OrderEnum order = OrderEnum.Descending)
+		public IEnumerable<Clipping> List(uint recs, OrderEnum order = OrderEnum.Descending)
 		{
-			return ListRecords(0, recs, order);
+			return List(0, recs, order);
 		}
 
 		protected virtual void Dispose(bool disposing)

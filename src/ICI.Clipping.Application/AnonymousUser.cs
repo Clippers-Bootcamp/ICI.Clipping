@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Representa um usuário que ainda não foi cadastrado.
 	/// </summary>
-	sealed class AnonymousUser : User
+	internal sealed class AnonymousUser : User
 	{
 		public AnonymousUser()
 		{
@@ -13,6 +13,12 @@
 			this.Name = "Anonymous User";
 			this.Profile = ProfileEnum.Reader;
 			this.Password = "B3AA65EB8408";
+		}
+
+		public override bool IsValid(out ErrorDictionary errors)
+		{
+			errors = default(ErrorDictionary);
+			return true;
 		}
 	}
 }

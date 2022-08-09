@@ -70,7 +70,7 @@ namespace ICI.Clipping.Application
 			if (user.Id == Guid.Empty)
 				user.Id = Guid.NewGuid();
 
-			var errors = new Dictionary<string, string>();
+			var errors = new ErrorDictionary();
 			if (!User.IsValid(user, out errors))
 				throw new InvalidObjectException(errors);
 

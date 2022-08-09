@@ -12,7 +12,7 @@ namespace ICI.Clipping.Application
 		{
 		}
 
-		public InvalidObjectException(Dictionary<string, string> errors) : base("O objeto é inválido. Veja a lista de erros para detalhes.")
+		public InvalidObjectException(ErrorDictionary errors) : base("O objeto é inválido. Veja a lista de erros para detalhes.")
 		{
 			errors.ToList().ForEach(x => this.Data.Add(x.Key, x.Value));
 		}

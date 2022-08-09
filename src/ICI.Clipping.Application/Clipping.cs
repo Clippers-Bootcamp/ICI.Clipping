@@ -24,6 +24,11 @@ namespace ICI.Clipping.Application
 		public string Synopsis { get; set; }
 
 		/// <summary>
+		/// Texto do recorte de notícia.
+		/// </summary>
+		public string Contents { get; set; }
+
+		/// <summary>
 		/// Link para o canal de divulgação.
 		/// </summary>
 		public string Link { get; set; }
@@ -59,9 +64,26 @@ namespace ICI.Clipping.Application
 		/// <param name="clipping"></param>
 		/// <param name="errors"></param>
 		/// <returns></returns>
-		internal static bool IsValid(Clipping clipping, out Dictionary<string, string> errors)
+		public static bool IsValid(Clipping clipping, out ErrorDictionary errors)
 		{
-			throw new NotImplementedException();
+			var valid = new Validate();
+			var passed = true;
+			passed &= Validate.IsUrl(clipping.Image) ||
+						valid.AddError(nameof(clipping.Image), "Imagem inválida");
+			passed &= Validate.IsUrl(clipping.Link) ||
+						valid.AddError(nameof(clipping.Link), "Link inválido");
+			passed &= Validate.LengthBetween(clipping.Local, 3, 50) ||
+						valid.AddError(nameof(clipping.Local), "Cidade deve conter 3 a 50 caracteres");
+			passed &= Validate.LengthBetween(clipping.NewsChannel, 1, 20) ||
+						valid.AddError(nameof(clipping.NewsChannel), "Canal de notícias deve conter 1 a 20 caracteres");
+			passed &= Validate.DatePast(clipping.Publish) ||
+						valid.AddError(nameof(clipping.Publish), "Data deve ser anterior à data atual");
+			passed &= Validate.LengthBetween(clipping.Synopsis, 5, 300) ||
+						valid.AddError(nameof(clipping.Synopsis), "Resumo do recorte deve conter 5 a 300 caracteres");
+			passed &= Validate.LengthBetween(clipping.Contents, 5, 5000) ||
+						valid.AddError(nameof(clipping.Contents), "Resumo do recorte deve conter 5 a 5000 caracteres");
+			errors = valid.CurrentErrorDictionary;
+			return passed;
 		}
 
 		/// <summary>
@@ -69,7 +91,7 @@ namespace ICI.Clipping.Application
 		/// </summary>
 		/// <param name="errors"></param>
 		/// <returns></returns>
-		internal bool IsValid(out Dictionary<string, string> errors)
+		public bool IsValid(out ErrorDictionary errors)
 		{
 			return IsValid(this, out errors);
 		}

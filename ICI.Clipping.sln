@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C1DA61FB-16B8-46D3-A9E6-DE9A037EC61D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		Scaffold-DbContext.ps1 = Scaffold-DbContext.ps1
+		DbContext.ps1 = DbContext.ps1
 		doc\tasks.txt = doc\tasks.txt
 	EndProjectSection
 EndProject

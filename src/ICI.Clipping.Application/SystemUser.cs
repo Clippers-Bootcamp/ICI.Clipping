@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Representa o próprio sistema.
 	/// </summary>
-	sealed class SystemUser : User
+	internal sealed class SystemUser : User
 	{
 		public SystemUser()
 		{
@@ -13,6 +13,12 @@
 			this.Name = "System User";
 			this.Profile = ProfileEnum.Editor;
 			this.Password = "8D7BAFF33F7E";
+		}
+
+		public override bool IsValid(out ErrorDictionary errors)
+		{
+			errors = default(ErrorDictionary);
+			return true;
 		}
 	}
 }

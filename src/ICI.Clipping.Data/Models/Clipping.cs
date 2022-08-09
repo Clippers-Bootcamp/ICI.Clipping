@@ -12,6 +12,7 @@ namespace ICI.Clipping.Data.Models
         public DateTime Changed { get; set; }
         public string Image { get; set; }
         public string Synopsis { get; set; }
+        public string Contents { get; set; }
         public string Link { get; set; }
         public string NewsChannel { get; set; }
         public string Local { get; set; }
