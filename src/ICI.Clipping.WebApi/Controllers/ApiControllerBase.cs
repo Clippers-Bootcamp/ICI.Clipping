@@ -16,6 +16,11 @@ namespace ICI.Clipping.WebApi.Controllers
 	[Route("[controller]")]
 	public class ApiControllerBase : Controller
 	{
+		/// <summary>
+		/// Usuário que está utilizando a Api.
+		/// </summary>
+		public User CurrentUser { get; private set; } = new AnonymousUser();
+
 		public override void OnActionExecuting(ActionExecutingContext context)
 		{
 			if (!IsAnonymousAllowed(context))

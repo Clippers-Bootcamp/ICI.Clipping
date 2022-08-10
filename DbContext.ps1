@@ -2,4 +2,4 @@ Scaffold-DbContext "Integrated Security=SSPI;Persist Security Info=False;Initial
 
 Add-Migration "Name" -StartupProject ICI.Clipping.Data -Project ICI.Clipping.Data
 
-UpdateDatabase -StartupProject ICI.Clipping.Data -Project ICI.Clipping.Data
+Update-Database -StartupProject ICI.Clipping.Data -Project ICI.Clipping.Data

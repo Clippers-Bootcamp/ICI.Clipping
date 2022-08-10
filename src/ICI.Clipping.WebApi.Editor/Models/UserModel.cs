@@ -7,7 +7,7 @@ namespace ICI.Clipping.WebApi.Editor.Models
 	/// <summary>
 	/// Modelo para atualização de usuário existente.
 	/// </summary>
-	public class UserModel : AuthorizeModel
+	public class UserModel
 	{
 		/// <summary>
 		/// Identificador do usuário.

@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace ICI.Clipping.Data.Models
 {
-    public partial class Score
+    public partial class Rate
     {
         public Guid Id { get; set; }
         public DateTime Created { get; set; }
         public DateTime Changed { get; set; }
         public Guid PublishId { get; set; }
         public Guid UserId { get; set; }
-        public double Rate { get; set; }
+        public byte RateIndex { get; set; }
     }
 }

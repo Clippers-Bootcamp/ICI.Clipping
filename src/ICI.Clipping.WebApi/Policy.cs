@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 namespace ICI.Clipping.WebApi
 {
 	/// <summary>
-	/// Nível de permissão das páginas.
+	/// Nível de permissão dos usuários.
 	/// </summary>
 	public static class Policy
 	{
-		public const string Interactive = nameof(Interactive);
-		public const string Editor = nameof(Editor);
 		public const string Reader = nameof(Reader);
+		public const string Editor = nameof(Editor);
+		public const string Admin = nameof(Admin);
 	}
 }

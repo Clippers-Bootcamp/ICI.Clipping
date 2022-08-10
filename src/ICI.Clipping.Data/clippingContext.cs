@@ -18,7 +18,7 @@ namespace ICI.Clipping.Data
         }
 
         public virtual DbSet<Models.Clipping> Clippings { get; set; }
-        public virtual DbSet<Models.Score> Scores { get; set; }
+        public virtual DbSet<Models.Rate> Rates { get; set; }
         public virtual DbSet<Models.User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -76,7 +76,7 @@ namespace ICI.Clipping.Data
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Models.Score>(entity =>
+            modelBuilder.Entity<Models.Rate>(entity =>
             {
                 entity.ToTable("Score");
 

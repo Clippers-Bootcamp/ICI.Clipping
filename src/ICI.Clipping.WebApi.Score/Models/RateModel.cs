@@ -6,7 +6,7 @@ namespace ICI.Clipping.WebApi.Ratings.Models
 	/// <summary>
 	/// Modelo de ranqueamento do recorte de notícias.
 	/// </summary>
-	public class RateModel : AuthorizeModel
+	public class RateModel
 	{
 		/// <summary>
 		/// Código do recorte de notícia.
