@@ -1,3 +1,4 @@
+using ICI.Clipping.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,7 @@ namespace ICI.Clipping.WebApi.Editor
 		{
 			services.AddCors();
 			services.AddControllers();
+			services.AddScoped<ClippingContext>();
 			////services.AddAuthorization(options => {
 			////	options.AddPolicy("Editor", policy => policy.RequireClaim("perfil", "editor"));
 			////	options.AddPolicy("Interactive", policy => policy.RequireClaim("int"));

@@ -39,7 +39,7 @@
 		/// <summary>
 		/// Pontuação do recorte de notícia.
 		/// </summary>
-		/// <remarks>Usar o nome da imagem: 1i.score.png (1 estrela inteira), 2m.score.png (1 estrela inteira e meia)</remarks>
-		public string Score { get; set; }
+		/// <remarks>Usar o nome da imagem: 1i.rate.png (1 estrela inteira), 2m.rate.png (1 estrela inteira e meia)</remarks>
+		public string Rate { get; set; }
 	}
 }

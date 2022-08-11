@@ -27,7 +27,7 @@ namespace ICI.Clipping.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Score",
+                name: "Rate",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "(newid())"),
@@ -39,7 +39,7 @@ namespace ICI.Clipping.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Score", x => x.Id);
+                    table.PrimaryKey("PK_Rate", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,7 +69,7 @@ namespace ICI.Clipping.Data.Migrations
                 name: "Clipping");
 
             migrationBuilder.DropTable(
-                name: "Score");
+                name: "Rate");
 
             migrationBuilder.DropTable(
                 name: "User");

@@ -24,11 +24,13 @@ namespace ICI.Clipping.Application
 
 		public static bool LengthBetween(string s, long min, long max)
 		{
+			s = s ?? "";
 			return s.Length >= min && s.Length <= max;
 		}
 
 		public static bool Includes(string s, params string[] charList)
 		{
+			s = s ?? "";
 			foreach (var cl in charList) {
 				if (!Regex.IsMatch(s, cl))
 					return false;

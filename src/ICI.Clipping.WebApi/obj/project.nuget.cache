@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hUxjKpS+ATn+xVhbM1VDzRFGYbqxWuxGOxkjH3t71D41XvqmaiMw6ca2zwFineNjnkDbh+xp7rQnsAZtNINH2Q==",
+  "dgSpecHash": "+4ekmtoDiGW/aRjr8sYlWCwpsAkT+F0MfX7HNx0ECX65QtXKXdNd3nQpG5WqaBsnvONGRiet6YjRn6u85wByJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\netch\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\netch\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.27\\microsoft.aspnetcore.authentication.jwtbearer.3.1.27.nupkg.sha512",

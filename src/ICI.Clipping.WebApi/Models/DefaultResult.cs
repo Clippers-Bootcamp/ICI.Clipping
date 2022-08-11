@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ICI.Clipping.WebApi.Models
@@ -20,5 +21,10 @@ namespace ICI.Clipping.WebApi.Models
 		/// Momento que a resposta foi fornecida
 		/// </summary>
 		public DateTime ResultDate { get => DateTime.Now; }
+
+		/// <summary>
+		/// Mensagens de erro personalizadas.
+		/// </summary>
+		public List<string> Errors { get; set; } = new List<string>();
 	}
 }

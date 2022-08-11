@@ -98,6 +98,27 @@ namespace ICI.Clipping.Application
 		}
 
 		/// <summary>
+		/// Obter um recorte de notícia.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
+		public Clipping Get(Guid id)
+		{
+			var ent = Context.Clippings.Find(id);
+			var clipping = new Clipping() {
+				Id = ent.Id,
+				Image = ent.Image,
+				Link = ent.Link,
+				Local = ent.Local,
+				NewsChannel = ent.NewsChannel,
+				Publish = ent.Publish,
+				Synopsis = ent.Synopsis,
+				Contents = ent.Contents,
+			};
+			return clipping;
+		}
+
+		/// <summary>
 		/// Listar uma quantidade específica de clipping.
 		/// </summary>
 		/// <param name="from"></param>
@@ -143,5 +164,4 @@ namespace ICI.Clipping.Application
 			GC.SuppressFinalize(this);
 		}
 	}
-
 }

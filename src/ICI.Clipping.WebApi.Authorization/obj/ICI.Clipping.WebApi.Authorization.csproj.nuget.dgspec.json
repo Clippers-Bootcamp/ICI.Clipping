@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj": {}
+    "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj": {}
   },
   "projects": {
-    "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
+    "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
+        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
         "projectName": "ICI.Clipping.Application",
-        "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
+        "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj",
         "packagesPath": "C:\\Users\\netch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\obj\\",
+        "outputPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,8 +35,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj"
+              "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj": {
+                "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj": {
+    "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj",
+        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj",
         "projectName": "ICI.Clipping.Data",
-        "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj",
+        "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\ICI.Clipping.Data.csproj",
         "packagesPath": "C:\\Users\\netch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Data\\obj\\",
+        "outputPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -160,14 +160,14 @@
         }
       }
     },
-    "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj": {
+    "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj",
+        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj",
         "projectName": "ICI.Clipping.WebApi.Authorization",
-        "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj",
+        "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\ICI.Clipping.WebApi.Authorization.csproj",
         "packagesPath": "C:\\Users\\netch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\obj\\",
+        "outputPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi.Authorization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -191,11 +191,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
+              "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
+                "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
               },
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj"
+              "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
+                "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj"
               }
             }
           }
@@ -249,14 +249,14 @@
         }
       }
     },
-    "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
+    "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
         "projectName": "ICI.Clipping.WebApi",
-        "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
+        "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\ICI.Clipping.WebApi.csproj",
         "packagesPath": "C:\\Users\\netch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -280,8 +280,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
-                "projectPath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
+              "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj": {
+                "projectPath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\src\\ICI.Clipping.Application\\ICI.Clipping.Application.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dXPzEpDm/lu39GDvJ46cXHV43HHL2aNn50D+9fBvnX+vdPEAlESL0ZfXR+24ealT6wt3fVvUvDXI/bZTWIpgEQ==",
+  "dgSpecHash": "IusqLOeWMxEkQJfzbatrNHHBlEpy+eZbdY3kfUv2ayGmihCu0emAZoR2Q4fS4Bt+JyQqsu8owuWoepMeTiRvRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\ICI.Clipping\\test\\ICI.Clipping.Application.Test\\ICI.Clipping.Application.Test.csproj",
+  "projectFilePath": "C:\\Users\\netch\\Source\\Repos\\Clippers-Bootcamp\\ICI.Clipping\\test\\ICI.Clipping.Application.Test\\ICI.Clipping.Application.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\netch\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\netch\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

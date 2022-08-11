@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.Data;
 using ICI.Clipping.WebApi.Controllers;
 using ICI.Clipping.WebApi.Models;
 using ICI.Clipping.WebApi.Ratings.Models;
@@ -17,10 +18,12 @@ namespace ICI.Clipping.WebApi.Ratings.Controllers
 	public class RatingController : ApiControllerBase
 	{
 		private readonly ILogger<RatingController> _logger;
+		private readonly ClippingContext _dbContext;
 
-		public RatingController(ILogger<RatingController> logger)
+		public RatingController(ILogger<RatingController> logger, ClippingContext dbContext)
 		{
 			_logger = logger;
+			_dbContext = dbContext;
 		}
 
 		[HttpPost]
@@ -28,7 +31,20 @@ namespace ICI.Clipping.WebApi.Ratings.Controllers
 		////[Authorize(Policy.Interactive)]
 		public DefaultResult Post ([FromBody] RateModel model)
 		{
-			throw new NotImplementedException();
+			var response = new DefaultResult();
+            try
+            {
+				var rates = new Application.Rates(_dbContext);
+				var clippings = new Application.Clippings(_dbContext);
+				var clipping = clippings.Get(model.ClippingId);
+				rates.Insert(CurrentUser, clipping, model.Rate);
+			}
+			catch (Exception ex)
+            {
+				response.StatusCode = 501;
+				//todo: colocar listagem de erros
+            }
+			return response;
 		}
 	}
 }

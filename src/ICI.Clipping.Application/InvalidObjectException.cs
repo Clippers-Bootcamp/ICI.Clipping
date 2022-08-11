@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Collections;
 
 namespace ICI.Clipping.Application
 {
@@ -27,6 +28,18 @@ namespace ICI.Clipping.Application
 
 		protected InvalidObjectException(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
+		}
+
+		/// <summary>
+		/// Retorna a lista de erros de forma simples, desagrupada.
+		/// </summary>
+		/// <returns></returns>
+        public List<string> ToSimpleList()
+        {
+			var values = this.Data.Values;
+			var lists = values.Cast<List<string>>();
+			var merged = lists.SelectMany(x => x);
+			return merged.ToList();
 		}
 	}
 }

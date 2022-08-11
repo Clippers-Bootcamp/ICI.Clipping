@@ -77,7 +77,7 @@ namespace ICI.Clipping.Data.Migrations
                     b.ToTable("Clipping");
                 });
 
-            modelBuilder.Entity("ICI.Clipping.Data.Models.Score", b =>
+            modelBuilder.Entity("ICI.Clipping.Data.Models.Rate", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -105,7 +105,7 @@ namespace ICI.Clipping.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Score");
+                    b.ToTable("Rate");
                 });
 
             modelBuilder.Entity("ICI.Clipping.Data.Models.User", b =>

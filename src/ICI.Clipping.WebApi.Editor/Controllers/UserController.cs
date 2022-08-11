@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ICI.Clipping.WebApi.Controllers;
 using ICI.Clipping.WebApi.Models;
 using Microsoft.AspNetCore.Authorization;
+using ICI.Clipping.Data;
 
 namespace ICI.Clipping.WebApi.Editor.Controllers
 {
@@ -18,26 +19,44 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 	public class UserController : ApiControllerBase
 	{
 		private readonly ILogger<UserController> _logger;
+		private readonly ClippingContext _context;
 
-		public UserController(ILogger<UserController> logger)
+		public UserController(ILogger<UserController> logger, ClippingContext context)
 		{
 			_logger = logger;
+			_context = context;
 		}
 
 		[HttpPost]
 		[Route("")]
-		public DefaultResult Post([FromBody] UserModel model)
+		public JsonResult Post([FromBody] UserModel model)
 		{
-			var response = new DefaultResult();
+			var result = new DefaultResult();
+            try
+            {
+				var users = new Users(_context);
 			var profile = ProfileEnum.None;
-			if (model?.IsReader ?? false) profile &= ProfileEnum.Reader;
-			if (model?.IsEditor ?? false) profile &= ProfileEnum.Editor;
-			if (model?.IsAdmin ?? false) profile &= ProfileEnum.Admin;
-
-			////var user = Application.Users.Create(model.Name, model.Login, model.Email, model.Password, profile);
-
-			throw new NotImplementedException();
-			return response;
+				if (model?.IsReader ?? false) profile |= ProfileEnum.Reader;
+				if (model?.IsEditor ?? false) profile |= ProfileEnum.Editor;
+				if (model?.IsAdmin ?? false) profile |= ProfileEnum.Admin;
+				var user = new Application.User()
+				{
+					Checked = false,
+					Email = model.Email,
+					Login = model.Login,
+					Name = model.Name,
+					Password = model.Password,
+					Profile = profile,
+				};
+				var id = users.Create(user);
+				result.StatusCode = 201;
+			}
+			catch (InvalidObjectException ex)
+            {
+				result.Errors = ex.ToSimpleList();
+				result.StatusCode = 400;
+            }
+			return Json(result);
 		}
 
 		[HttpPut]

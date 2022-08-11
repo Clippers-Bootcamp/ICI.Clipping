@@ -13,11 +13,11 @@ namespace ICI.Clipping.Application
 	/// </summary>
 	public class Users : IDisposable
 	{
-		private readonly ClippingContext Context;
+		private readonly ClippingContext _context;
 
-		public Users(ClippingContext _context)
+		public Users(ClippingContext context)
 		{
-			this.Context = _context;
+			_context = context;
 		}
 
 		/// <summary>
@@ -27,7 +27,7 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		public User Load(Guid id)
 		{
-			var ent = Context.Users.Find(id);
+			var ent = _context.Users.Find(id);
 			var user = new User();
 			user.Email = ent.Email;
 			user.Id = ent.Id;
@@ -83,8 +83,8 @@ namespace ICI.Clipping.Application
 			ent.Name = user.Name;
 			ent.Password = user.Password;
 			ent.Profile = (byte)user.Profile;
-			Context.Users.Add(ent);
-			Context.SaveChanges();
+			_context.Users.Add(ent);
+			_context.SaveChanges();
 			return user.Id;
 		}
 
@@ -94,7 +94,7 @@ namespace ICI.Clipping.Application
 		/// <param name="user"></param>
 		public void Change(User user)
 		{
-			var ent = Context.Users.Find(user.Id);
+			var ent = _context.Users.Find(user.Id);
 			ent.Checked = user.Checked;
 			ent.Email = user.Email;
 			ent.Id = user.Id;
@@ -102,7 +102,7 @@ namespace ICI.Clipping.Application
 			ent.Name = user.Name;
 			ent.Password = user.Password;
 			ent.Profile = (byte)user.Profile;
-			Context.SaveChanges();
+			_context.SaveChanges();
 		}
 
 		/// <summary>
@@ -111,9 +111,9 @@ namespace ICI.Clipping.Application
 		/// <param name="user"></param>
 		public void Disable(User user)
 		{
-			var ent = Context.Users.Find(user.Id);
+			var ent = _context.Users.Find(user.Id);
 			ent.Checked = false;
-			Context.SaveChanges();
+			_context.SaveChanges();
 		}
 
 		/// <summary>
@@ -122,9 +122,9 @@ namespace ICI.Clipping.Application
 		/// <param name="user"></param>
 		public void Enable(User user)
 		{
-			var ent = Context.Users.Find(user.Id);
+			var ent = _context.Users.Find(user.Id);
 			ent.Checked = true;
-			Context.SaveChanges();
+			_context.SaveChanges();
 		}
 
 		/// <summary>
@@ -133,9 +133,9 @@ namespace ICI.Clipping.Application
 		/// <param name="user"></param>
 		public void Delete(User user)
 		{
-			var ent = Context.Users.Find(user.Id);
+			var ent = _context.Users.Find(user.Id);
 			ent.Deleted = true;
-			Context.SaveChanges();
+			_context.SaveChanges();
 		}
 
 		/// <summary>
@@ -146,7 +146,7 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		public IEnumerable<User> ListAll()
 		{
-			foreach (var ent in Context.Users) {
+			foreach (var ent in _context.Users) {
 				yield return new User() {
 					Checked = ent.Checked,
 					Email = ent.Email,
@@ -161,7 +161,7 @@ namespace ICI.Clipping.Application
 		protected virtual void Dispose(bool disposing)
 		{
 			if (disposing) {
-				Context.Dispose();
+				_context.Dispose();
 			}
 		}
 
