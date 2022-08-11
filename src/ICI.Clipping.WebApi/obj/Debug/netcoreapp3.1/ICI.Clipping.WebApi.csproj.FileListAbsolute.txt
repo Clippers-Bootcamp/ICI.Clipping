@@ -228,3 +228,4 @@ C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.WebA
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.RazorTargetAssemblyInfo.cache
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.csproj.CopyComplete
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.genruntimeconfig.cache
+C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.WebApi\obj\Debug\netcoreapp3.1\ICI.Clipping.WebApi.MvcApplicationPartsAssemblyInfo.cs

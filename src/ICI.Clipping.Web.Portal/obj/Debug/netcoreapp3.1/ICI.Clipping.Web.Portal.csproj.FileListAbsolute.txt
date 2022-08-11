@@ -43,7 +43,6 @@ C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\bin\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.pdb
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\bin\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.Views.dll
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\bin\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.Views.pdb
-C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.csproj.AssemblyReference.cache
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.AssemblyInfoInputs.cache
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.AssemblyInfo.cs
