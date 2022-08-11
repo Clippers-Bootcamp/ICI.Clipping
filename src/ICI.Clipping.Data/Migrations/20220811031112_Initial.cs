@@ -16,6 +16,7 @@ namespace ICI.Clipping.Data.Migrations
                     Changed = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
                     Image = table.Column<string>(type: "varchar(150)", unicode: false, maxLength: 150, nullable: false),
                     Synopsis = table.Column<string>(type: "varchar(2000)", unicode: false, maxLength: 2000, nullable: false),
+                    Contents = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Link = table.Column<string>(type: "varchar(300)", unicode: false, maxLength: 300, nullable: false),
                     NewsChannel = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
                     Local = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
@@ -33,9 +34,9 @@ namespace ICI.Clipping.Data.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "(newid())"),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
                     Changed = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
-                    PublishId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ClippingId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Rate = table.Column<double>(type: "float", nullable: false)
+                    RateIndex = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
                 {

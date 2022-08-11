@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ICI.Clipping.Data.Migrations
 {
     [DbContext(typeof(ClippingContext))]
-    [Migration("20220809003806_add-clipping-contentx")]
-    partial class AddColumn
+    [Migration("20220811031112_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,16 +92,16 @@ namespace ICI.Clipping.Data.Migrations
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("(getdate())");
 
+                    b.Property<Guid>("ClippingId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("(getdate())");
 
-                    b.Property<Guid>("PublishId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Rate")
-                        .HasColumnType("float");
+                    b.Property<byte>("RateIndex")
+                        .HasColumnType("tinyint");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");

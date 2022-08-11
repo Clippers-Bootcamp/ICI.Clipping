@@ -90,16 +90,16 @@ namespace ICI.Clipping.Data.Migrations
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("(getdate())");
 
+                    b.Property<Guid>("ClippingId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("(getdate())");
 
-                    b.Property<Guid>("PublishId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Rate")
-                        .HasColumnType("float");
+                    b.Property<byte>("RateIndex")
+                        .HasColumnType("tinyint");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");

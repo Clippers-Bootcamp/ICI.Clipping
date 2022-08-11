@@ -68,3 +68,4 @@ C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.pdb
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.genruntimeconfig.cache
 C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.csproj.CopyComplete
+C:\Users\netch\Source\Repos\Clippers-Bootcamp\ICI.Clipping\src\ICI.Clipping.Web.Portal\obj\Debug\netcoreapp3.1\ICI.Clipping.Web.Portal.csproj.AssemblyReference.cache
