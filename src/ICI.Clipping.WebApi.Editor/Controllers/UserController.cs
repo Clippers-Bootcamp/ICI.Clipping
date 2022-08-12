@@ -13,14 +13,13 @@ using ICI.Clipping.Data;
 
 namespace ICI.Clipping.WebApi.Editor.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    [Authorize(Policy.Editor)]
-    [Authorize(Policy.Admin)]
-    public class UserController : ApiControllerBase
-    {
-        private readonly ILogger<UserController> _logger;
-        private readonly ClippingContext _context;
+	[ApiController]
+	[Route("[controller]")]
+	////[Authorize(Policy.Editor)]
+	public class UserController : ApiControllerBase
+	{
+		private readonly ILogger<UserController> _logger;
+		private readonly ClippingContext _context;
 
         public UserController(ILogger<UserController> logger, ClippingContext context)
         {
