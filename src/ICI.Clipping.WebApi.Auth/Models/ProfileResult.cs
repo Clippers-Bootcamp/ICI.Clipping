@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 namespace ICI.Clipping.WebApi.Auth.Models
 {
 	/// <summary>
-	/// Modelo de resultado de autorização do usuário logado.
+	/// Modelo de resultado de permissões de um usuário.
 	/// </summary>
-	public class AuthResult : DefaultResult
+	public class ProfileResult : DefaultResult
 	{
-		public string Token { get; set; }
+		public bool IsReader { get; set; }
 
-		public DateTime Validade { get; set; }
+		public bool IsEditor { get; set; }
+
+		public bool IsAdmin { get; set; }
 	}
 }

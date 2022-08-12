@@ -23,11 +23,39 @@ namespace ICI.Clipping.Application
 		/// <summary>
 		/// Obter um usuário.
 		/// </summary>
+		/// <param name="login"></param>
+		/// <param name="password"></param>
+		/// <returns></returns>
+		public User Load(string login, string password)
+		{
+			var ent = _context.Users.FirstOrDefault(x => x.Login == login);
+			if (ent == null)
+				throw new UserNotFoundException();
+
+			if (ent.Password != password)
+				throw new InvalidPasswordException();
+
+			var user = new User();
+			user.Email = ent.Email;
+			user.Id = ent.Id;
+			user.Login = ent.Login;
+			user.Name = ent.Name;
+			user.Password = ent.Password;
+			user.Profile = (ProfileEnum)ent.Profile;
+			return user;
+		}
+
+		/// <summary>
+		/// Obter um usuário.
+		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
 		public User Load(Guid id)
 		{
 			var ent = _context.Users.Find(id);
+			if (ent == null)
+				throw new UserNotFoundException();
+
 			var user = new User();
 			user.Email = ent.Email;
 			user.Id = ent.Id;

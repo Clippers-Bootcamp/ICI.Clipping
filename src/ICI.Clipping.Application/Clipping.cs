@@ -64,13 +64,13 @@ namespace ICI.Clipping.Application
 			}
 		}
 
-		/// <summary>
-		/// Verifica se o recorte de notícias atual é válido.
-		/// </summary>
-		/// <param name="clipping"></param>
-		/// <param name="errors"></param>
-		/// <returns></returns>
-		public static bool IsValid(Clipping clipping, out ErrorDictionary errors)
+        /// <summary>
+        /// Verifica se o recorte de notícias atual é válido.
+        /// </summary>
+        /// <param name="clipping"></param>
+        /// <param name="errors"></param>
+        /// <returns></returns>
+        public static bool IsValid(Clipping clipping, out ErrorDictionary errors)
 		{
 			var valid = new Validate();
 			var passed = true;

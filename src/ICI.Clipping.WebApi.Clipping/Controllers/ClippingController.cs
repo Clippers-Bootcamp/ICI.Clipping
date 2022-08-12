@@ -27,13 +27,13 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 
 		[HttpGet]
 		[Route("")]
-		public JsonResult Get(uint quantity)
+		public JsonResult Get(ushort quantity)
 		{
 			var result = new Models.PageResult();
 			try
 			{
 				var clips = new Application.Clippings(_context);
-				var list = clips.List(0, quantity - 1).ToList();
+				var list = clips.List(quantity).ToList();
 				result.List = list.Select(x => new ClippingModel()
 				{
 					Id = x.Id.ToString(),

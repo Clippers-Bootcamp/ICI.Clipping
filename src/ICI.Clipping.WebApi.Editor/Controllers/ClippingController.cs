@@ -54,14 +54,5 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 			return response;
 		}
 
-		[HttpGet]
-		[Route("")]
-		public DefaultResult Get(ClippingModel model, ushort quantity)
-		{
-			//todo: usar as propriedades preenchidas de UserModel como filtro
-			var response = new DefaultResult();
-			throw new NotImplementedException();
-			return response;
-		}
 	}
 }

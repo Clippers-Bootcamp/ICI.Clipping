@@ -10,13 +10,8 @@ namespace ICI.Clipping.WebApi.Models
 	/// <summary>
 	/// Modelo de resultado padrão.
 	/// </summary>
-	public class DefaultResult : ActionResult, IStatusCodeActionResult
+	public class DefaultResult : ActionResult
 	{
-		/// <summary>
-		/// Código de status da página.
-		/// </summary>
-		public int? StatusCode { get; set; } = 200;
-
 		/// <summary>
 		/// Momento que a resposta foi fornecida
 		/// </summary>

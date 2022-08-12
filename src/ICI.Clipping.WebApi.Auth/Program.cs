@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Authorization
+namespace ICI.Clipping.WebApi.Auth
 {
 	public class Program
 	{

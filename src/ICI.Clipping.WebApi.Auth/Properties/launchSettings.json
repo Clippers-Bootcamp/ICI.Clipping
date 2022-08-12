@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ICI.Clipping.WebApi.Authorization": {
+    "ICI.Clipping.WebApi.Auth": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "/",
