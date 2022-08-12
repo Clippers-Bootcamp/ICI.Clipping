@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Authorization.Models
+namespace ICI.Clipping.WebApi.Auth.Models
 {
 	/// <summary>
 	/// Modelo para autenticação de usuário.

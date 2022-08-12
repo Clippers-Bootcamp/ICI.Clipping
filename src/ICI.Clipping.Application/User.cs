@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
+using Newtonsoft.Json;
+using System.Text.Encodings;
 
 namespace ICI.Clipping.Application
 {
@@ -80,6 +82,43 @@ namespace ICI.Clipping.Application
 		public virtual bool IsValid(out ErrorDictionary errors)
 		{
 			return IsValid(this, out errors);
+		}
+
+		/// <summary>
+		/// Criptografar o usuário atual num token.
+		/// </summary>
+		/// <returns></returns>
+		public virtual string ToTokenString(bool includePassword = false) {
+			var user = new
+			{
+				login = this.Login,
+				email = this.Email,
+				id = this.Id,
+				name = this.Name,
+				profile = this.Profile,
+				password = includePassword ? this.Password : null,
+				@checked = this.Checked,
+			};
+			var json = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(user));
+			return Convert.ToBase64String(json);
+		}
+
+		/// <summary>
+		/// Descriptografar um token para o usuário atual.
+		/// </summary>
+		/// <returns></returns>
+		public virtual void FromTokenString(string token)
+		{
+			var contents = Convert.FromBase64String(token);
+			var json = Encoding.UTF8.GetString(contents);
+			var user = JsonConvert.DeserializeObject<User>(json);
+			this.Email = user.Email;
+			this.Checked = user.Checked;
+			this.Id = user.Id;
+			this.Login = user.Login;
+			this.Name = user.Name;
+			this.Password = user.Password;
+			this.Profile = user.Profile;
 		}
 	}
 }

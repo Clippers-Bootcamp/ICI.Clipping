@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Representa um usuário que ainda não foi cadastrado.
 	/// </summary>
-	internal sealed class AnonymousUser : User
+	public sealed class AnonymousUser : User
 	{
 		public AnonymousUser()
 		{

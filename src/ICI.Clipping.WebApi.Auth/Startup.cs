@@ -1,3 +1,4 @@
+using ICI.Clipping.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ICI.Clipping.WebApi.Authorization
+namespace ICI.Clipping.WebApi.Auth
 {
 	public class Startup
 	{
@@ -28,8 +29,9 @@ namespace ICI.Clipping.WebApi.Authorization
 		{
 			services.AddControllers();
 			services.AddSwaggerGen(c => {
-				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Authorization", Version = "v1" });
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Auth", Version = "v1" });
 			});
+			services.AddScoped<ClippingContext>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +40,7 @@ namespace ICI.Clipping.WebApi.Authorization
 			if (env.IsDevelopment()) {
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.WebApi.Authorization"));
+				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICI.Clipping.WebApi.Auth"));
 			}
 
 			app.UseHttpsRedirection();

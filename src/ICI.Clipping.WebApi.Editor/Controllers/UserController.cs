@@ -15,7 +15,8 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	////[Authorize(Policy.Editor)]
+    [Authorize(Policy.Editor)]
+    [Authorize(Policy.Admin)]
 	public class UserController : ApiControllerBase
 	{
 		private readonly ILogger<UserController> _logger;
