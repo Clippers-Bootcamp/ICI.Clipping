@@ -11,14 +11,14 @@ namespace ICI.Clipping.Application
 	/// </summary>
 	public class Clippings : IDisposable
 	{
-		private readonly ClippingContext Context;
+		private readonly ClippingContext _context;
 
 		/// <summary>
 		/// Usuário atual que está utilizando o clipping.
 		/// </summary>
 		public readonly User CurrentUser;
 
-		public Clippings(ClippingContext _context, User user = default(User))
+		public Clippings(ClippingContext context, User user = default(User))
 		{
 			user ??= new AnonymousUser();
 
@@ -26,7 +26,7 @@ namespace ICI.Clipping.Application
 			if (!user.IsValid(out errors))
 				throw new InvalidObjectException(errors);
 
-			Context = _context;
+			_context = context;
 			CurrentUser = user;
 		}
 
@@ -72,8 +72,8 @@ namespace ICI.Clipping.Application
 			ent.Publish = clipping.Publish;
 			ent.Synopsis = clipping.Synopsis;
 			ent.Contents = clipping.Contents;
-			Context.Clippings.Add(ent);
-			Context.SaveChanges();
+			_context.Clippings.Add(ent);
+			_context.SaveChanges();
 			return ent.Id;
 		}
 
@@ -92,9 +92,9 @@ namespace ICI.Clipping.Application
 		/// <param name="id"></param>
 		public void Remove(Guid id)
 		{
-			var ent = Context.Clippings.Find(id);
-			Context.Clippings.Remove(ent);
-			Context.SaveChanges();
+			var ent = _context.Clippings.Find(id);
+			_context.Clippings.Remove(ent);
+			_context.SaveChanges();
 		}
 
 		/// <summary>
@@ -104,7 +104,7 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		public Clipping Get(Guid id)
 		{
-			var ent = Context.Clippings.Find(id);
+			var ent = _context.Clippings.Find(id);
 			var clipping = new Clipping() {
 				Id = ent.Id,
 				Image = ent.Image,
@@ -126,7 +126,7 @@ namespace ICI.Clipping.Application
 		/// <returns></returns>
 		public IEnumerable<Clipping> List(uint from, uint to, OrderEnum order = OrderEnum.Descending)
 		{
-			foreach (var ent in Context.Clippings.Skip((int)from).Take((int)(to - from))) {
+			foreach (var ent in _context.Clippings.Skip((int)from).Take((int)(to - from))) {
 				yield return new Clipping() { 
 					Id = ent.Id,
 					Image = ent.Image,
@@ -140,20 +140,10 @@ namespace ICI.Clipping.Application
 			}
 		}
 
-		/// <summary>
-		/// Listar uma quantidade específica de clipping do início ou do final.
-		/// </summary>
-		/// <param name="recs"></param>
-		/// <returns></returns>
-		public IEnumerable<Clipping> List(uint recs, OrderEnum order = OrderEnum.Descending)
-		{
-			return List(0, recs, order);
-		}
-
 		protected virtual void Dispose(bool disposing)
 		{
 			if (disposing) {
-				Context.Dispose();
+				_context.Dispose();
 			}
 		}
 

@@ -1,4 +1,5 @@
 ﻿using ICI.Clipping.Application;
+using ICI.Clipping.Data;
 using ICI.Clipping.WebApi.Controllers;
 using ICI.Clipping.WebApi.Editor.Models;
 using ICI.Clipping.WebApi.Models;
@@ -18,10 +19,12 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 	public class ClippingController : ApiControllerBase
 	{
 		private readonly ILogger<ClippingController> _logger;
+		private readonly ClippingContext _context;
 
-		public ClippingController(ILogger<ClippingController> logger)
+		public ClippingController(ILogger<ClippingController> logger, ClippingContext context)
 		{
 			_logger = logger;
+			_context = context;
 		}
 
 		[HttpPost]

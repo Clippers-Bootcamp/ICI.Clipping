@@ -49,12 +49,18 @@ namespace ICI.Clipping.Application
 		public DateTime Publish { get; set; }
 
 		/// <summary>
+		/// Nota do usuário.
+		/// </summary>
+		public byte Rate { get; set; }
+
+		/// <summary>
 		/// Média de pontuação da notícia.
 		/// </summary>
 		public float Score
 		{
 			get {
-				throw new NotImplementedException();
+				return 5;
+				//todo: throw new NotImplementedException();
 			}
 		}
 

@@ -16,6 +16,6 @@ namespace ICI.Clipping.WebApi.Clippings.Models
 		/// <summary>
 		/// Listagem de recortes de notícias.
 		/// </summary>
-		public List<ClippingModel> List;
+		public List<ClippingModel> List { get; set; }
 	}
 }

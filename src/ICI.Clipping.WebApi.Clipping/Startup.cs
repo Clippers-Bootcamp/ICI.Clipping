@@ -1,3 +1,4 @@
+using ICI.Clipping.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +31,7 @@ namespace ICI.Clipping.WebApi.Clippings
 			services.AddSwaggerGen(c => {
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICI.Clipping.WebApi.Clippings", Version = "v1" });
 			});
+			services.AddScoped<ClippingContext>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
