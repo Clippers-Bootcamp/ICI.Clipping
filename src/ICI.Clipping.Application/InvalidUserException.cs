@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ICI.Clipping.Application
 {
 	[Serializable]
-	internal class InvalidUserException : Exception
+	public class InvalidUserException : Exception
 	{
 		public InvalidUserException() : base("Usuário inválido para a operação especificada.")
 		{

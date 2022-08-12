@@ -41,7 +41,7 @@ namespace ICI.Clipping.WebApi.Ratings.Controllers
 			}
 			catch (Exception ex)
             {
-				response.StatusCode = 501;
+				Response.StatusCode = 501;
 				//todo: colocar listagem de erros
             }
 			return response;

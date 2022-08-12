@@ -50,12 +50,12 @@ namespace ICI.Clipping.WebApi.Editor.Controllers
                     Profile = profile,
                 };
                 var id = users.Create(user);
-                result.StatusCode = 201;
+                Response.StatusCode = 201;
             }
             catch (InvalidObjectException ex)
             {
                 result.Errors = ex.ToSimpleList();
-                result.StatusCode = 400;
+                Response.StatusCode = 400;
             }
             return Json(result);
         }

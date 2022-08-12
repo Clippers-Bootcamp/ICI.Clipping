@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ICI.Clipping.Application
 {
     [Serializable]
-    internal class InvalidPasswordException : Exception
+    public class InvalidPasswordException : Exception
     {
         public InvalidPasswordException() : base("Senha incorreta")
         {

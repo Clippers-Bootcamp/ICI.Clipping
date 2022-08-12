@@ -7,7 +7,7 @@ using System.Collections;
 namespace ICI.Clipping.Application
 {
 	[Serializable]
-	internal class InvalidObjectException : Exception
+	public class InvalidObjectException : Exception
 	{
 		public InvalidObjectException()
 		{

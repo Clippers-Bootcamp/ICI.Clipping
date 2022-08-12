@@ -27,13 +27,13 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 
 		[HttpGet]
 		[Route("")]
-		public JsonResult Get(ushort quantity)
+		public JsonResult Get(uint quantity)
 		{
 			var result = new Models.PageResult();
 			try
 			{
 				var clips = new Application.Clippings(_context);
-				var list = clips.List(quantity).ToList();
+				var list = clips.List(0, quantity - 1).ToList();
 				result.List = list.Select(x => new ClippingModel()
 				{
 					Id = x.Id.ToString(),
@@ -47,7 +47,6 @@ namespace ICI.Clipping.WebApi.Clippings.Controllers
 			catch (InvalidObjectException ex)
 			{
 				result.Errors = ex.ToSimpleList();
-				result.StatusCode = 400;
 			}
 			return Json(result);
 		}
