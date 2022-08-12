@@ -59,7 +59,6 @@ namespace ICI.Clipping.WebApi.Auth.Controllers
 		{
 			//todo: descriptografar o token
             //todo: pelo objeto ir na base verificar se o usuário é valido
-            throw new NotImplementedException();
 		}
 
 
